@@ -7,4 +7,17 @@
     <string name="country">Country</string>
     <string name="language_colon">Language:</string>
     <string name="language">Language</string>
+    <string name="title_colon">Title:</string>
+    <string name="link_colon">Link:</string>
+    <string name="link">Link</string>
+    <string name="pages_colon">Pages:</string>
+    <string name="pages">Pages</string>
+    <string name="year_colon">Year:</string>
+    <string name="year">Year</string>
+    <string name="price_colon">Price:</string>
+    <string name="price">Price</string>
+    <string name="last_price_colon">Last price:</string>
+    <string name="last_price">Last price</string>
+    <string name="delivery_colon">Delivery:</string>
+    <string name="delivery">Delivery</string>
 </resources>
