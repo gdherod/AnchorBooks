@@ -2,6 +2,8 @@ package com.anchorbooks.bestseller.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.anchorbooks.bestseller.databinding.BookItemListingBinding
 import com.anchorbooks.bestseller.model.remote.pojo.Book
@@ -12,6 +14,10 @@ class BookAdapter : RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
 
     private var booksList = listOf<Book>()
 
+    private val bookSelected = MutableLiveData<Book>()
+
+    fun bookSelected(): LiveData<Book> = bookSelected
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookViewHolder {
         val binding = BookItemListingBinding.inflate(LayoutInflater.from(parent.context))
 
@@ -21,6 +27,9 @@ class BookAdapter : RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
     override fun onBindViewHolder(holder: BookViewHolder, position: Int) {
         val book = booksList[position]
         holder.bind(book)
+        holder.itemView.setOnClickListener {
+            bookSelected.value = book
+        }
     }
 
     override fun getItemCount(): Int {

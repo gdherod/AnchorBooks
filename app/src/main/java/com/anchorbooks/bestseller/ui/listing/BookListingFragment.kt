@@ -5,16 +5,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.anchorbooks.bestseller.R
 import com.anchorbooks.bestseller.databinding.FragmentBookListingBinding
 import com.anchorbooks.bestseller.ui.adapter.BookAdapter
-import com.anchorbooks.bestseller.ui.vm.VMBookListing
+import com.anchorbooks.bestseller.ui.detail.BookDetailFragment
+import com.anchorbooks.bestseller.ui.vm.BookViewModel
+import timber.log.Timber
 
 class BookListingFragment : Fragment() {
     private lateinit var binding: FragmentBookListingBinding
 
-    private val bookVM: VMBookListing by viewModels()
+    private val bookVM: BookViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,6 +28,14 @@ class BookListingFragment : Fragment() {
         binding.booksList.layoutManager = LinearLayoutManager(context)
         val adapter = BookAdapter()
         binding.booksList.adapter = adapter
+
+        adapter.bookSelected().observe(viewLifecycleOwner, {
+            Timber.d("$it seleccionado")
+            bookVM.bookSelected(it)
+            activity?.supportFragmentManager?.beginTransaction()
+                ?.replace(R.id.activity_main_container, BookDetailFragment())
+                ?.addToBackStack("Detalle")?.commit()
+        })
 
         bookVM.books().observe(viewLifecycleOwner, {
             adapter.update(it)
