@@ -11,7 +11,6 @@ abstract class BookDatabase: RoomDatabase() {
     abstract fun bookDao(): BookDao
 }
 
-// Inicialización de la base de datos
 class BookApplication : Application() {
     companion object {
         var bookDatabase : BookDatabase? = null

@@ -10,8 +10,6 @@ import com.anchorbooks.bestseller.utils.TimberInitializer
 class MainActivity : AppCompatActivity() {
     private val timberInitializer = TimberInitializer()
 
-    private val viewModel by viewModels<BookViewModel>()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

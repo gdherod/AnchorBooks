@@ -41,7 +41,7 @@ class BookAdapter : RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
         notifyDataSetChanged()
     }
 
-    class BookViewHolder(val binding: BookItemListingBinding) :
+    class BookViewHolder(private val binding: BookItemListingBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(book: Book) {
             binding.bookTitleItem.text = book.title
