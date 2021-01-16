@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Anchor Books</string>
+    <string name="title">Title</string>
+    <string name="author_colon">Author:</string>
+    <string name="author">Author</string>
+    <string name="country_colon">Country:</string>
+    <string name="country">Country</string>
+    <string name="language_colon">Language:</string>
+    <string name="language">Language</string>
 </resources>
