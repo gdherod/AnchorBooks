@@ -1,9 +1,7 @@
 package com.anchorbooks.bestseller.ui.vm
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
+import com.anchorbooks.bestseller.model.db.mapperBookDBToApi
 import com.anchorbooks.bestseller.model.remote.pojo.Book
 import com.anchorbooks.bestseller.model.remote.pojo.BookDetail
 import com.anchorbooks.bestseller.model.repository.BookRepository
@@ -13,7 +11,11 @@ import timber.log.Timber
 class BookViewModel : ViewModel() {
     private val repository = BookRepository()
 
-    private val books = repository.books
+    private val books = Transformations.map(repository.books) {
+        entities -> entities.map {
+            mapperBookDBToApi(it)
+    }
+    }
 
     private val bookSelected = MutableLiveData<Book>()
 
