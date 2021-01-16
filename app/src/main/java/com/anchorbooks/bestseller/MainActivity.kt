@@ -4,13 +4,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import com.anchorbooks.bestseller.ui.listing.BookListingFragment
-import com.anchorbooks.bestseller.ui.vm.VMBookListing
+import com.anchorbooks.bestseller.ui.vm.BookViewModel
 import com.anchorbooks.bestseller.utils.TimberInitializer
 
 class MainActivity : AppCompatActivity() {
     private val timberInitializer = TimberInitializer()
 
-    private val viewModel by viewModels<VMBookListing>()
+    private val viewModel by viewModels<BookViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
