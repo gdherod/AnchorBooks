@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import com.anchorbooks.bestseller.model.db.BookApplication
 import com.anchorbooks.bestseller.model.db.mapperBookApiToDB
 import com.anchorbooks.bestseller.model.remote.RetrofitClient
+import com.anchorbooks.bestseller.model.remote.pojo.Book
 import com.anchorbooks.bestseller.model.remote.pojo.BookDetail
 import timber.log.Timber
 
