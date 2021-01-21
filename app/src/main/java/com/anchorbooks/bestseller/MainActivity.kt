@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         timberInitializer.initTimber()
-        supportFragmentManager.beginTransaction().add(R.id.activity_main_container, BookListingFragment()).commit()
+        supportFragmentManager.beginTransaction()
+            .add(R.id.activity_main_container, BookListingFragment()).commit()
     }
 }
