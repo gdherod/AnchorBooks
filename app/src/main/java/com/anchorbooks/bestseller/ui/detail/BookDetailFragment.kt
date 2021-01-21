@@ -24,7 +24,7 @@ class BookDetailFragment : Fragment() {
     ): View {
         binding = FragmentBookDetailBinding.inflate(layoutInflater)
 
-        bookVM.bookSelected().observe(viewLifecycleOwner, {
+        bookVM.bookDetail().observe(viewLifecycleOwner, {
             Timber.d("El libro seleccionado es $it")
         })
         bookVM.bookDetail().observe(viewLifecycleOwner, {
