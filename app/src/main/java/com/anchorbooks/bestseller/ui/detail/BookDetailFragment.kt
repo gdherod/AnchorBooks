@@ -1,5 +1,6 @@
 package com.anchorbooks.bestseller.ui.detail
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import com.anchorbooks.bestseller.databinding.FragmentBookDetailBinding
 import com.anchorbooks.bestseller.ui.vm.BookViewModel
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.google.android.material.snackbar.Snackbar
 import timber.log.Timber
 
 class BookDetailFragment : Fragment() {
@@ -43,7 +45,31 @@ class BookDetailFragment : Fragment() {
             binding.bookDetailPrice.text = it.price.toString()
             binding.bookDetailLastprice.text = it.lastPrice.toString()
             binding.bookDetailDelivery.text = it.delivery.toString()
+
+            fun email() {
+                val intent = Intent(Intent.ACTION_SEND)
+                intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("ventas@anchorBooks.cl"))
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Consulta por libro ${it.title}, id ${it.id}")
+                intent.putExtra(
+                    Intent.EXTRA_TEXT, "Hola" +
+                            "Vi el libro ${it.title} de código ${it.id} y me gustaría que me contactaran a este correo o al" +
+                            "siguiente número +56 9 ________" +
+                            "Quedo atento."
+                )
+                intent.type = "message/rfc822"
+                startActivity(Intent.createChooser(intent, "Email del cliente"))
+            }
+
+            binding.floatingMailButton.setOnClickListener { view ->
+                Snackbar.make(view, "Email", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null)
+                    .show()
+                email()
+            }
         })
+
+
+
         return binding.root
     }
 }
