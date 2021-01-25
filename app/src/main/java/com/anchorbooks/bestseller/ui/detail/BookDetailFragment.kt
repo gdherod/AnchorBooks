@@ -47,7 +47,7 @@ class BookDetailFragment : Fragment() {
             binding.bookDetailPrice.text = it.price.toString()
             binding.bookDetailLastprice.text = it.lastPrice.toString()
             when {
-                (it.delivery.equals(true)) ->
+                (it.delivery) ->
                     binding.bookDetailDelivery.text = deliveryYes
                 else -> binding.bookDetailDelivery.text = deliveryNo
             }
