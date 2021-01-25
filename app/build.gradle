@@ -69,4 +69,12 @@ dependencies {
     implementation "androidx.room:room-runtime:$roomVersion"
     kapt "androidx.room:room-compiler:$roomVersion"
     implementation "androidx.room:room-ktx:$roomVersion"
+
+    // Testing for DB
+    androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
+    androidTestImplementation "androidx.room:room-testing:$roomVersion"
+
+    // Truth(library for performing assertions in tests)
+    androidTestImplementation 'androidx.test.ext:truth:1.3.0'
+
 }
