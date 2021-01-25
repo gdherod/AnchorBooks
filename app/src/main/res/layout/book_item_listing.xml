@@ -4,14 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/book_img_list"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,45 +23,46 @@
 
     <TextView
         android:id="@+id/book_title_item"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/title"
-        android:textStyle="bold"
+        android:textColor="@color/primary_text"
         app:layout_constraintStart_toEndOf="@+id/book_img_list"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/book_author_list"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:text="@string/author_colon"
-        android:textSize="15sp"
+        android:textColor="@color/secondary_text"
         app:layout_constraintStart_toEndOf="@+id/book_img_list"
         app:layout_constraintTop_toBottomOf="@+id/book_title_item" />
 
     <TextView
         android:id="@+id/book_author_item"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="@string/author"
-        android:textSize="15sp"
+        android:textColor="@color/secondary_text"
         app:layout_constraintStart_toEndOf="@+id/book_author_list"
         app:layout_constraintTop_toBottomOf="@+id/book_title_item" />
 
     <TextView
         android:id="@+id/book_country_list"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:text="@string/country_colon"
-        android:textSize="13sp"
+        android:textColor="@color/secondary_text"
         app:layout_constraintStart_toEndOf="@+id/book_img_list"
         app:layout_constraintTop_toBottomOf="@+id/book_author_list" />
 
@@ -67,9 +71,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="@string/country"
-        android:textSize="13sp"
+        android:textColor="@color/secondary_text"
         app:layout_constraintStart_toEndOf="@+id/book_country_list"
         app:layout_constraintTop_toBottomOf="@+id/book_author_list" />
 
@@ -77,10 +81,10 @@
         android:id="@+id/book_language_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:text="@string/language_colon"
-        android:textSize="15sp"
+        android:textColor="@color/secondary_text"
         app:layout_constraintStart_toEndOf="@+id/book_img_list"
         app:layout_constraintTop_toBottomOf="@+id/book_country_list" />
 
@@ -89,9 +93,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="@string/language"
-        android:textSize="15sp"
+        android:textColor="@color/secondary_text"
         app:layout_constraintStart_toEndOf="@+id/book_language_list"
         app:layout_constraintTop_toBottomOf="@+id/book_country_item" />
 

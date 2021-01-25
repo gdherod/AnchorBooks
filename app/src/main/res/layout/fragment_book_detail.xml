@@ -20,14 +20,19 @@
 
             <ImageView
                 android:id="@+id/book_detail_img"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_width="250dp"
+                android:layout_height="500dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toTopOf="@+id/book_detail_title"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:src="@tools:sample/avatars"
-                tools:ignore="ContentDescription" />
+                tools:ignore="ContentDescription"
+                tools:src="@tools:sample/avatars" />
 
             <TextView
                 android:id="@+id/book_detail_title_text"
@@ -36,6 +41,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/title_colon"
+                android:textColor="@color/primary_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/book_detail_img" />
 
@@ -45,6 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:text="@string/title"
+                android:textColor="@color/secondary_text"
                 app:layout_constraintBaseline_toBaselineOf="@+id/book_detail_title_text"
                 app:layout_constraintStart_toEndOf="@+id/book_detail_title_text" />
 
@@ -55,6 +62,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/author_colon"
+                android:textColor="@color/primary_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/book_detail_title_text" />
 
@@ -64,6 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:text="@string/author"
+                android:textColor="@color/secondary_text"
                 app:layout_constraintBaseline_toBaselineOf="@+id/book_detail_author_text"
                 app:layout_constraintStart_toEndOf="@+id/book_detail_author_text" />
 
@@ -74,6 +83,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/country_colon"
+                android:textColor="@color/primary_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/book_detail_author_text" />
 
@@ -83,6 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:text="@string/country"
+                android:textColor="@color/secondary_text"
                 app:layout_constraintBaseline_toBaselineOf="@+id/book_detail_country_text"
                 app:layout_constraintStart_toEndOf="@+id/book_detail_country_text" />
 
@@ -93,6 +104,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/language_colon"
+                android:textColor="@color/primary_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/book_detail_country_text" />
 
@@ -102,6 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:text="@string/language"
+                android:textColor="@color/secondary_text"
                 app:layout_constraintBaseline_toBaselineOf="@+id/book_detail_language_text"
                 app:layout_constraintStart_toEndOf="@+id/book_detail_language_text" />
 
@@ -112,6 +125,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/link_colon"
+                android:textColor="@color/primary_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/book_detail_language_text" />
 
@@ -121,6 +135,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:text="@string/link"
+                android:textColor="@color/secondary_text"
                 app:layout_constraintBaseline_toBaselineOf="@+id/book_detail_link_text"
                 app:layout_constraintStart_toEndOf="@+id/book_detail_link_text" />
 
@@ -131,6 +146,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/pages_colon"
+                android:textColor="@color/primary_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/book_detail_link_text" />
 
@@ -140,6 +156,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:text="@string/pages"
+                android:textColor="@color/secondary_text"
                 app:layout_constraintBaseline_toBaselineOf="@+id/book_detail_pages_text"
                 app:layout_constraintStart_toEndOf="@+id/book_detail_pages_text" />
 
@@ -150,6 +167,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/year_colon"
+                android:textColor="@color/primary_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/book_detail_pages_text" />
 
@@ -159,6 +177,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:text="@string/year"
+                android:textColor="@color/secondary_text"
                 app:layout_constraintBaseline_toBaselineOf="@+id/book_detail_year_text"
                 app:layout_constraintStart_toEndOf="@+id/book_detail_year_text" />
 
@@ -169,6 +188,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/price_colon"
+                android:textColor="@color/primary_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/book_detail_year_text" />
 
@@ -178,6 +198,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:text="@string/price"
+                android:textColor="@color/secondary_text"
                 app:layout_constraintBaseline_toBaselineOf="@+id/book_detail_price_text"
                 app:layout_constraintStart_toEndOf="@+id/book_detail_price_text" />
 
@@ -188,6 +209,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/last_price_colon"
+                android:textColor="@color/primary_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/book_detail_price_text" />
 
@@ -197,6 +219,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:text="@string/last_price"
+                android:textColor="@color/secondary_text"
                 app:layout_constraintBaseline_toBaselineOf="@+id/book_detail_lastprice_text"
                 app:layout_constraintStart_toEndOf="@+id/book_detail_lastprice_text" />
 
@@ -207,6 +230,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/delivery_colon"
+                android:textColor="@color/primary_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/book_detail_lastprice_text" />
 
@@ -216,19 +240,24 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:text="@string/delivery"
+                android:textColor="@color/secondary_text"
                 app:layout_constraintBaseline_toBaselineOf="@+id/book_detail_delivery_text"
                 app:layout_constraintStart_toEndOf="@+id/book_detail_delivery_text" />
 
+
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/floatingMailButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="58dp"
+                android:layout_height="52dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
                 android:clickable="true"
+                android:contentDescription="@string/email"
+                android:focusable="true"
                 android:src="@drawable/ic_baseline_mail_outline_24"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:focusable="true"
-                android:contentDescription="@string/email" />
+                app:layout_constraintEnd_toEndOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
