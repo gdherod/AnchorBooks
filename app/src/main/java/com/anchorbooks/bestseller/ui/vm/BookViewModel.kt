@@ -26,8 +26,6 @@ class BookViewModel : ViewModel() {
         }
     }
 
-    //fun bookSelected(): LiveData<Book> = bookSelected
-
     private val bookSelected = MutableLiveData<Book>()
 
     fun bookDetail(): LiveData<BookDetailEntity> = repository.bookDetail
