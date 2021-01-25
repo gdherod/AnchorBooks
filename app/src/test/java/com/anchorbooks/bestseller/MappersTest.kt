@@ -11,7 +11,7 @@ class MappersTest {
         // Given
         val book = Book(
             0,
-            "quwerty",
+            "qwerty",
             "Chile",
             "asdf",
             "la",
