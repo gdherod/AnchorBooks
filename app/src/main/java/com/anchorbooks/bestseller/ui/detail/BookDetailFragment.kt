@@ -16,6 +16,8 @@ import timber.log.Timber
 
 class BookDetailFragment : Fragment() {
     private lateinit var binding: FragmentBookDetailBinding
+    private val deliveryYes = "Cuenta con despacho"
+    private val deliveryNo = "Sin despacho"
 
     private val bookVM: BookViewModel by activityViewModels()
 
@@ -44,7 +46,11 @@ class BookDetailFragment : Fragment() {
             binding.bookDetailYear.text = it.year.toString()
             binding.bookDetailPrice.text = it.price.toString()
             binding.bookDetailLastprice.text = it.lastPrice.toString()
-            binding.bookDetailDelivery.text = it.delivery.toString()
+            when {
+                (it.delivery.equals(true)) ->
+                    binding.bookDetailDelivery.text = deliveryYes
+                else -> binding.bookDetailDelivery.text = deliveryNo
+            }
 
             fun email() {
                 val intent = Intent(Intent.ACTION_SEND)
