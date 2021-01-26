@@ -50,7 +50,7 @@ class BooksDataBaseTest {
     @Test
     fun insertBooks_1book() = runBlocking {
         // Given
-        val bookList = listOf<BookEntity>(
+        val bookList = listOf(
             BookEntity
                 (
                 0,
